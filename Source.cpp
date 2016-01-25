@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
-#include <fstream>
-//#include <windows.h> //Need for system("cls") on Windows
+#include <string>
+#include <windows.h> //Need for system("cls") on Windows
 
 using namespace std;
 
@@ -50,7 +50,7 @@ int main()
             if (input == "N" || input == "n")
             {
                 adding = false;
-                //system("cls");
+                system("cls");
             }
         }
     }
@@ -71,7 +71,7 @@ int main()
             if (input == "N" || input == "n")
             {
                 subtracting = false;
-                //system("cls");
+                system("cls");
             }
         }
     }
@@ -92,7 +92,7 @@ int main()
             if (input == "N" || input == "n")
             {
                 multiplying = false;
-                //system("cls");
+                system("cls");
             }
         }
     }
@@ -113,7 +113,7 @@ int main()
             if (input == "N" || input == "n")
             {
                 dividing = false;
-                //system("cls");
+                system("cls");
             }
         }
     }
@@ -126,6 +126,8 @@ int main()
         cin >> b;
         answer = pow(a, b);
         cout << "The square is: " << answer << endl;
+        system("pause");
+        system("cls");
     }
     else if (input == "6")
     {
@@ -148,6 +150,8 @@ int main()
             cout << "x: " << answer << endl;
             answer = (-b - sqrt(pow(b, 2) - (4 * a * c)))/(2 * a);
             cout << "x: " << answer << endl;
+            system("pause");
+            system("cls");
         }
     }
     else if (input == "Exit" || input == "exit" || input == "EXIT")

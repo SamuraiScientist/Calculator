@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <fstream>
-//#include <windows.h> //Need for system("cls") on Windows
 
 using namespace std;
 
@@ -50,7 +48,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 adding = false;
-                //system("cls");
             }
         }
     }
@@ -71,7 +68,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 subtracting = false;
-                //system("cls");
             }
         }
     }
@@ -92,7 +88,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 multiplying = false;
-                //system("cls");
             }
         }
     }
@@ -113,7 +108,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 dividing = false;
-                //system("cls");
             }
         }
     }

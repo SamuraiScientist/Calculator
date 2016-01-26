@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cmath>
-#include <fstream>
-//#include <windows.h> //Need for system("cls") on Windows
 
 using namespace std;
+
+#define PI 3.14159
 
 float a;
 float b;
@@ -26,11 +26,15 @@ int main()
     head:
     cout << "Calculator\n";
     cout << "1. Add\n";
-    cout << "2. Sub\n";
+    cout << "2. Subtract\n";
     cout << "3. Multiply\n";
     cout << "4. Divide\n";
     cout << "5. Power\n";
     cout << "6. Quadratic Formula\n";
+    cout << "7. Triangle Area\n";
+    cout << "8. Trapezoid Area\n";
+    cout << "9. Circle Area\n";
+    cout << "10. Rectangular Prisim Volume\n";
     cout << "Enter Operation Number: ";
     cin >> input;
     if (input == "1")
@@ -50,7 +54,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 adding = false;
-                //system("cls");
             }
         }
     }
@@ -71,7 +74,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 subtracting = false;
-                //system("cls");
             }
         }
     }
@@ -92,7 +94,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 multiplying = false;
-                //system("cls");
             }
         }
     }
@@ -113,7 +114,6 @@ int main()
             if (input == "N" || input == "n")
             {
                 dividing = false;
-                //system("cls");
             }
         }
     }
@@ -140,7 +140,7 @@ int main()
         handler = pow(b, 2) - (4 * a * c);
         if (handler < 0)
         {
-            cout << "Error: No real roots\n";
+            cout << "Error: No real roots!\n";
         }
         else
         {
@@ -150,13 +150,55 @@ int main()
             cout << "x: " << answer << endl;
         }
     }
+    else if (input == "7")
+    {
+        cout << "AREA OF TRIANGLE\n";
+        cout << "Enter the base: ";
+        cin >> a;
+        cout << "Enter the height: ";
+        cin >> b;
+        answer = (0.5 * a) * b;
+        cout << "The area is " << answer << endl;
+    }
+    else if (input == "8")
+    {
+        cout << "AREA OF TRAPEZOID\n";
+        cout << "Enter Base 1: ";
+        cin >> a;
+        cout << "Enter Base 2: ";
+        cin >> b;
+        cout << "Enter Height ";
+        cin >> c;
+        answer = ((a + b) * c) / 2;
+        cout << "The area is " << answer << endl;
+    }
+    else if (input == "9")
+    {
+        cout << "AREA OF CIRCLE\n";
+        cout << "Enter the radius: ";
+        cin >> a;
+        answer = PI * (pow(a, 2));
+        cout << "The radius is " << answer << endl;
+    }
+    else if (input == "10")
+    {
+        cout << "VOLUME OF RECTANGULAR PRISIM\n";
+        cout << "Enter Length: ";
+        cin >> a;
+        cout << "Enter Width: ";
+        cin >> b;
+        cout << "Enter Height: ";
+        cin >> c;
+        answer = a * b * c;
+        cout << "The volume is " << answer << endl;
+    }
     else if (input == "Exit" || input == "exit" || input == "EXIT")
     {
         goto leave;
     }
     else 
     {
-        cout << "ERROR: Not a valid operation!\n";
+        cout << "ERROR: Not a valid operation!\a\n";
         goto head;
     }
     

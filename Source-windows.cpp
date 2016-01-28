@@ -164,7 +164,7 @@ int main()
         }
         else if (input == "1")
         {
-           cout << "VOLUME OF RECTANGULAR PRISIM\n";
+            cout << "VOLUME OF RECTANGULAR PRISIM\n";
             cout << "Enter Length: ";
             cin >> a;
             cout << "Enter Width: ";
@@ -176,15 +176,15 @@ int main()
         }
         else if (input == "2")
         {
-            cout << "AREA OF TRAPEZOID\n";
-            cout << "Enter Base 1: ";
+            cout << "VOLUME OF PYRAMID\n";
+            cout << "Enter Length: ";
             cin >> a;
-            cout << "Enter Base 2: ";
+            cout << "Enter Width: ";
             cin >> b;
-            cout << "Enter Height ";
+            cout << "Enter Height: ";
             cin >> c;
-            answer = ((a + b) * c) / 2;
-            cout << "The area is " << answer << endl;
+            answer = (a * b * c) / 2;
+            cout << "The volume is " << answer << endl;
         }
         
     }

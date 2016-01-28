@@ -26,7 +26,7 @@ bool dividing = false;
 int main()
 {
     SetConsoleTitle("Calculator");
-    mainList:
+    listMain:
     cout << "CALCULATOR\n";
     cout << "1. Basic Ops.\n";
     cout << "2. Area\n";
@@ -53,7 +53,7 @@ int main()
         cin >> input;
         if (input == "Back" || input == "back")
         {
-            goto mainList;
+            goto listMain;
         }
         else if (input == "1")
         {
@@ -64,9 +64,6 @@ int main()
             cin >> b;
             answer = a + b;
             cout << "The sum is " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
         else if (input == "2")
         {
@@ -77,9 +74,6 @@ int main()
             cin >> b;
             answer = a - b;
             cout << "The difference is: " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
         else if (input == "3")
         {
@@ -90,9 +84,6 @@ int main()
             cin >> b;
             answer = a * b;
             cout << "The product is: " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
         else if (input == "4")
         {
@@ -103,9 +94,6 @@ int main()
             cin >> b;
             answer = a / b;
             cout << "The divident is: " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
         else if (input == "5")
         {
@@ -116,9 +104,6 @@ int main()
             cin >> b;
             answer = pow(a, b);
             cout << "The square is: " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
     }
     else if (input == "2")
@@ -132,7 +117,7 @@ int main()
         cin >> input;
         if (input == "Back" || input == "back")
         {
-            goto mainList;
+            goto listMain;
         }
         else if (input == "1")
         {
@@ -143,9 +128,6 @@ int main()
             cin >> b;
             answer = (0.5 * a) * b;
             cout << "The area is " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
         else if (input == "2")
         {
@@ -158,9 +140,6 @@ int main()
             cin >> c;
             answer = ((a + b) * c) / 2;
             cout << "The area is " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
         else if (input == "3")
         {
@@ -169,9 +148,6 @@ int main()
             cin >> a;
             answer = PI * (pow(a, 2));
             cout << "The radius is " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
         }
     }
     else if (input == "3")
@@ -179,10 +155,12 @@ int main()
         listVol:
         cout << "VOLUME\n";
         cout << "1. Rectangular Prisim\n";
+        cout << "2. Pyramid\n";
+        cout << "Enter Operation Number: ";
         cin >> input;
         if (input == "Back" || input == "back")
         {
-            goto mainList;
+            goto listMain;
         }
         else if (input == "1")
         {
@@ -195,9 +173,18 @@ int main()
             cin >> c;
             answer = a * b * c;
             cout << "The volume is " << answer << endl;
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
+        }
+        else if (input == "2")
+        {
+            cout << "AREA OF TRAPEZOID\n";
+            cout << "Enter Base 1: ";
+            cin >> a;
+            cout << "Enter Base 2: ";
+            cin >> b;
+            cout << "Enter Height ";
+            cin >> c;
+            answer = ((a + b) * c) / 2;
+            cout << "The area is " << answer << endl;
         }
         
     }
@@ -210,7 +197,7 @@ int main()
         cin >> input;
         if (input == "Back" || input == "back")
         {
-            goto mainList;
+            goto listMain;
         }
         else if (input == "1")
         {
@@ -234,9 +221,7 @@ int main()
                 answer = (-b - sqrt(pow(b, 2) - (4 * a * c)))/(2 * a);
                 cout << "x: " << answer << endl;
             }
-            cout << "Make sure to copy down the information you need.\n";
-            system("pause");
-            system("cls");
+            
         }
     }
     else if (input == "5")
@@ -251,10 +236,15 @@ int main()
     else 
     {
         cout << "ERROR: Not a valid operation!\a\n";
-        goto mainList;
+        system("pause");
+        system("cls");
+        goto listMain;
     }
     
-    goto mainList;
+    cout << "Make sure to copy down the information you need.\n";
+    system("pause");
+    system("cls");
+    goto listMain;
     
     leave:
     exit;
